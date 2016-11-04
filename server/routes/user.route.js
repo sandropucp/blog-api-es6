@@ -11,7 +11,7 @@ router.route('/')
   .post(validate(paramValidation.createUser),userCtrl.create);    
 
 router.route('/:userId')  
-  .get(userCtrl.get)  
+  .get(authenticateMiddl.authenticate,userCtrl.get)  
   .put(authenticateMiddl.authenticate,validate(paramValidation.updateUser), userCtrl.update)  
   .delete(authenticateMiddl.authenticate,userCtrl.remove);
 

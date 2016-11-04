@@ -16,16 +16,14 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   mobileNumber: {
-    type: String,
-    required: true    
+    type: String        
   },
   birthYear: {
     type: Number    
   },
   password: {
     type: String,
-    require: true,
-    minlength: 6
+    require: true    
   },
   createdAt: {
     type: Date,
@@ -63,7 +61,7 @@ UserSchema.method({
     var user = this;
     var userObject = user.toObject();
 
-    return _.pick(userObject, ['_id', 'name','username', 'birthYear']);    
+    return _.pick(userObject, ['_id', 'name','username', 'birthYear','mobileNumber']);    
   },
 
   generateAuthToken() {

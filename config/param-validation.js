@@ -6,7 +6,8 @@ export default {
     body: {
       name: Joi.string().min(3).max(30).required(),
       username: Joi.string().email().required(),
-      mobileNumber: Joi.string().regex(/^[1-9][0-9]{9}$/).required(),
+      mobileNumber: Joi.string().regex(/^[1-9][0-9]{9}$/),
+      birthYear: Joi.number(),
       password: Joi.string().min(3).max(15).required()       
     }
   },
@@ -14,13 +15,9 @@ export default {
   // UPDATE /api/users/:userId
   updateUser: {
     body: {
-      name: Joi.string().min(3).max(30).required(),
-      username: Joi.string().email().required(),
-      mobileNumber: Joi.string().regex(/^[1-9][0-9]{9}$/).required(),
-      password: Joi.string().min(3).max(15).required()       
-    },
-    params: {
-      userId: Joi.string().hex().required()
+      name: Joi.string().min(3).max(30).required(),      
+      mobileNumber: Joi.string().regex(/^[1-9][0-9]{9}$/),
+      birthYear: Joi.number()
     }
   },
 

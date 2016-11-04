@@ -52,10 +52,10 @@ StorySchema.statics = {
 
   list({
     skip = 0,
-    limit = 50
+    limit = 50,
+    query = {}
   } = {}) {
-    console.log('list..............');
-    return this.find({})
+    return this.find(query)
       .populate('author')
       .populate('category')
       .populate('tags')

@@ -8,9 +8,9 @@ function authenticate(req, res, next) {
       if (!user) {
         return Promise.reject();
       }
-      req.user = user;
-      req.token = token;
-      console.info('******* Authenticate req.user: ' + req.user);
+      //req.user = user;
+      //req.token = token;
+      //console.info('******* Authenticate req.user: ' + req.user);
       next();
     })
     .catch((e) => {

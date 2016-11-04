@@ -74,10 +74,10 @@ function list(req, res, next) {
     limit = 50, skip = 0
   } = req.query;
 
-  console.log();
   Story.list({
       limit,
-      skip
+      skip,
+      query
     })
     .then(stories => res.json(stories))
     .catch(e => next(e));
