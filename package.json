@@ -1,8 +1,8 @@
 {
-  "name": "express-mongoose-es6-rest-api",
+  "name": "blog-api-es6",
   "version": "1.0.0",
-  "description": "A Boilerplate application for building REST APIs using express, mongoose in ES6 with code coverage",
-  "author": "Kunal Kapadia <kunalkapadia12@gmail.com>",
+  "description": "",
+  "author": "",
   "main": "index.js",
   "private": false,
   "engines": {
@@ -14,14 +14,14 @@
     "build": "gulp",
     "lint": "esw *.js server config --color",
     "lint:watch": "npm run lint -- --watch",
-    "test": "NODE_ENV=test babel-node node_modules/.bin/isparta cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./server/**/*.test.js",
+    "test": "SET NODE_ENV=test babel-node node_modules/.bin/isparta cover _mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./server/**/*.test.js",
     "test:watch": "npm run test -- --watch",
     "test:check-coverage": "npm run test && istanbul check-coverage",
     "report-coverage": "coveralls < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:KunalKapadia/express-mongoose-es6-rest-api.git"
+    "url": ""
   },
   "keywords": [
     "express",
